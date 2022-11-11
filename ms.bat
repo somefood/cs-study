@@ -1,19 +1,18 @@
 @echo off
-
-set CONTAINER_NAME=sql-db-images
-set SET_SQL_PATH=/etc/mysql/setDB/setDB.sql
+set IMAGE_NAME=sql-db-images
+set CONTAINER_NAME=starters_db
+set SET_SQL_PATH=/etc/mysql/setDB/sample.sql
 set SET_BOOK_PATH=/etc/mysql/setDB/sample.dump
-set SET_SQL_DELAY=5
+set SET_SQL_DELAY=15
 set DB_ROOT_UID=root
 set DB_ROOT_PASSWORD=starters12
-
 echo.
 echo.
-echo [RUN] 1. Remove Container '%CONTAINER_NAME%' 
+echo [RUN] 1. Remove Container '%CONTAINER_NAME%'
 echo.
 docker stop %CONTAINER_NAME%
 docker rm %CONTAINER_NAME%
-docker rmi %CONTAINER_NAME%
+docker rmi %IMAGE_NAME%
 echo.
 echo [RUN] 2. Run Container
 echo.
@@ -26,7 +25,7 @@ timeout %SET_SQL_DELAY%
 echo.
 docker exec %CONTAINER_NAME% sh -c "mysql -u%DB_ROOT_UID% -p%DB_ROOT_PASSWORD% < %SET_SQL_PATH%"
 docker exec %CONTAINER_NAME% sh -c "mysql -u%DB_ROOT_UID% -p%DB_ROOT_PASSWORD% < %SET_BOOK_PATH%"
-echo. 
+echo.
 echo [RUN COMPLETE]
 echo.
 echo.
