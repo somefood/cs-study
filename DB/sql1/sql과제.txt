@@ -1,0 +1,5 @@
+1. SELECT t.* FROM starters.customers t where country = 'france';
+2. SELECT t.* FROM starters.customers t where customerName like 'Mini%';
+3. SELECT t.* FROM starters.customers t where  addressLine2 is null ;
+4. SELECT t.* FROM starters.customers t where  addressLine2 is null and customerName like '%Co';
+5. SELECT e.* FROM starters.employees e GROUP BY officeCode DESC ;
