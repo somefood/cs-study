@@ -9,3 +9,7 @@
 4. customers 테이블에서 addressLine2가 NULL이면서 customerName가 'Co' 끝나는 로우들을 검색하시오.
 
 5. employees 테이블에서 officeo officeCode의 중복을 제거해서 "내림차순"으로 검색하시오.
+
+# 프로그래머스 추가 과제
+
+[join ](https://school.programmers.co.kr/learn/courses/30/lessons/133025)
