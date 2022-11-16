@@ -12,4 +12,4 @@
 
 # 프로그래머스 추가 과제
 
-[join ](https://school.programmers.co.kr/learn/courses/30/lessons/133025)
+[join 연습](https://school.programmers.co.kr/learn/courses/30/lessons/133025)
