@@ -27,5 +27,7 @@ ORDER BY FIRST_HALF.TOTAL_ORDER DESC;
 
 #과제3 
 
-1.동물 보호소에 들어온 모든 동물의 정보를 ANIMAL_ID순으로 조회하는 SQL문을 작성해주세요.
->SELECT * from ANIMAL_INS ORDER BY 'ANIMAL_INS' DESC;
+1.동물 보호소에 들어온 모든 동물의 정보를 ANIMAL_ID순으로 조회하는 SQL문을 작성해주세요
+> SELECT * from ANIMAL_INS ORDER BY 'ANIMAL_INS' DESC;
+
+   
