@@ -12,4 +12,6 @@
 
 # 프로그래머스 추가 과제
 
-[join 연습](https://school.programmers.co.kr/learn/courses/30/lessons/133025)
+[11/16 - join 연습](https://school.programmers.co.kr/learn/courses/30/lessons/133025)
+
+[11/17 - 단순 SELECT](https://school.programmers.co.kr/learn/courses/30/lessons/59034)
