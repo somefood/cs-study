@@ -22,3 +22,8 @@ select icecream_info.flavor from icecream_info left join first_half on first_hal
 #과제3
 
 select * from animal_ins order by animal_id
+
+
+#과제4
+
+select count(*) from user_info where (age >= 20 and age <= 29) and (joined between '2021-1-1' and '2021-12-31')
