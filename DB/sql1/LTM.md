@@ -19,3 +19,7 @@
 #과제2 이태민임미다
 
 select icecream_info.flavor from icecream_info left join first_half on first_half.flavor = icecream_info.flavor where total_order > 3000 and ingredient_type = 'fruit_based'
+
+#과제3
+
+select * from animal_ins order by animal_id
