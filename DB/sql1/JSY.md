@@ -15,3 +15,19 @@
 5. employees 테이블에서 officecode의 중복을 제거해서 "내림차순"으로 검색
 
 >select distinct officeCode from employees ORDER BY officeCode desc;
+
+#과제2
+
+1. 상반기 아이스크림 총주문량이 3,000보다 높으면서 아이스크림의 주 성분이 과일인 아이스크림의 맛을 총주문량이 큰 순서대로 조회하는 SQL 문을 작성해주세요.
+
+>SELECT FIRST_HALF.FLAVOR from FIRST_HALF f inner join ICECREAM_INFO i on (FIRST_HALF.FLAVOR=ICECREAM_INFO.FLAVOR)
+where ICECREAM_INFO.INGREDIENT_TYPE = 'fruit_based' and FIRST_HALF.TOTAL_ORDER>3000 
+ORDER BY FIRST_HALF.TOTAL_ORDER DESC;
+
+
+#과제3 
+
+1.동물 보호소에 들어온 모든 동물의 정보를 ANIMAL_ID순으로 조회하는 SQL문을 작성해주세요
+> SELECT * from ANIMAL_INS ORDER BY 'ANIMAL_INS' DESC;
+
+   
