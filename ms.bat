@@ -29,3 +29,4 @@ echo.
 echo [RUN COMPLETE]
 echo.
 echo.
+pause
