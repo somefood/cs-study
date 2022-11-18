@@ -14,3 +14,11 @@
 
 5. employees 테이블에서 officecode의 중복을 제거해서 "내림차순"으로 검색
 # select distinct officeCode from employees order by officeCode desc
+
+#과제2 이태민임미다
+
+select icecream_info.flavor from icecream_info left join first_half on first_half.flavor = icecream_info.flavor where total_order > 3000 and ingredient_type = 'fruit_based'
+
+#과제3
+
+select * from animal_ins order by animal_id
