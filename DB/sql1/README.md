@@ -15,3 +15,5 @@
 [11/16 - join 연습](https://school.programmers.co.kr/learn/courses/30/lessons/133025)
 
 [11/17 - 단순 SELECT](https://school.programmers.co.kr/learn/courses/30/lessons/59034)
+
+[11/18 - count 연습](https://school.programmers.co.kr/learn/courses/30/lessons/131535)
