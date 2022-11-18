@@ -29,4 +29,4 @@ Docker를 통해 모두가 같은 데이터를 가지고 편안하게 연습할 
 3. 툴에서 다음 DB들 열어줌
   - sample: SQL 첫걸음 데이터
   - starters: mysqltutorail.org 데이터 (출처: https://www.mysqltutorial.org/mysql-sample-database.aspx)
-4. 폴더에서 제공되는 문제를 보고, sql 작성하여 제출! (본인 branch를 파서 제출해야함)
+4. 폴더에서 제공되는 문제를 보고, sql 작성하여 제출!
