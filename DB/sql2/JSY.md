@@ -20,3 +20,12 @@ where employ.officeCode = 8;
 
 
 6. DELETE from employees where employeeNumber = 1112;
+
+>프로그래머스 과제
+
+1. 단순 SELECT, IFNULL 함수
+
+SELECT PT_NAME,PT_NO,GEND_CD,AGE, CASE when TLNO is null then 'NONE' ELSE TLNO END 'TLNO' 
+from patient where age<=12 and GEND_CD = 'W' 
+order by AGE DESC, PT_NAME asc;
+
