@@ -6,8 +6,10 @@
 
   ```mariadb
   insert into offices(officeCode, city, phone, addressLine1, addressLine2, state, country, postalCode, territory)
-values (8, 'Seoul', '+82 10 1234 5678', 'my home', 'my parents home', null, 'Korea', '12345', 'Korea');
+  values (8, 'Seoul', '+82 10 1234 5678', 'my home', 'my parents home', null, 'Korea', '12345', 'Korea');
   ```
+
+  
 
 - 2번 : `employess` 테이블에 맞는 로우 세 개를 생성해 보시오. 단, `officeCode`는 **1번에서 생성한 로우ID**를 지정
 
