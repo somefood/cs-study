@@ -14,3 +14,5 @@
 ---
 
 ## 프로그래머스
+
+[단순 SELECT, IFNULL 함수 ](https://school.programmers.co.kr/learn/courses/30/lessons/132201)
