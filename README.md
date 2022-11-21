@@ -24,7 +24,12 @@ Docker를 통해 모두가 같은 데이터를 가지고 편안하게 연습할 
 
 1. 레포지토리를 clone 받는다.
 2. 본인 OS에 맞는 스크립트를 실행시킨다.
-  - MAC or Linux: ./linux.sh
+  - MAC or Linux
+
+    ```shell
+    ./linux.sh
+    ```
+
   - Windows: ms.bat
 3. 툴에서 다음 DB들 열어줌
   - sample: SQL 첫걸음 데이터
@@ -33,6 +38,13 @@ Docker를 통해 모두가 같은 데이터를 가지고 편안하게 연습할 
 
 #### MariaDB 정보
 
-- ID: root
-- Password: starters12
-> 간단 접속 방법: mysql -uroot -pstarters12
+- ID: `root`
+
+- Password: `starters12`
+
+  ```shell
+  # 간단 접속 방법
+  mysql -u root -p starters12
+  ```
+
+  
