@@ -29,3 +29,8 @@ SELECT PT_NAME,PT_NO,GEND_CD,AGE, CASE when TLNO is null then 'NONE' ELSE TLNO E
 from patient where age<=12 and GEND_CD = 'W' 
 order by AGE DESC, PT_NAME asc;
 
+2. JOIN, 2단계
+
+SELECT PRODUCT_CODE,SUM(PRICE*SALES_AMOUNT) SALES from product inner join OFFLINE_SALE 
+on (PRODUCT.PRODUCT_ID = offline_SALE.PRODUCT_ID) group by PRODUCT_CODE order by SALES desc, PRODUCT_CODE asc;
+
