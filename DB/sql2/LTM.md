@@ -55,5 +55,11 @@ select * from employees;
 delete from employees where jobTitle = 'Programmar' and firstName = 'undertaker'
 select * from employees;
 
-#7번
+#7번 https://school.programmers.co.kr/learn/courses/30/lessons/132201
 SELECT PT_NAME, PT_NO, GEND_CD, AGE, ifnull(tlno,'NONE') as TLNO from patient where age <= 12 and gend_cd = 'w' order by age desc, pt_name asc
+
+#8번 https://school.programmers.co.kr/learn/courses/30/lessons/131533
+select PRODUCT_CODE, (sum(sales_amount) * price) as SALES
+from product left join offline_sale 
+on product.product_id = offline_sale.product_id
+group by product_code order by sales desc, product_code
