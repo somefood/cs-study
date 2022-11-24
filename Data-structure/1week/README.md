@@ -87,7 +87,7 @@ boolean add(int data);
 
 - `data`에 해당하는 숫자를 `list`의 맨 뒤에 추가하세요.
 
-- `data`가 `Integer range(–2,147,483,648 ~ 2,147,483,647)`를 넘어간다면 `IllegalArgumentException`를 발생시키세요.
+- `data`가 `range(–2,000,000,000 ~ 2,000,000,000)`를 넘어간다면 `IllegalArgumentException`를 발생시키세요.
 
   - Error Message
 
