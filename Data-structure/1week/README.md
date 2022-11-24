@@ -27,10 +27,14 @@ interface SinglyLinkedList {
     int find(int index);
     
     int delete(int index);
+  
+    void show();
 }
 ```
 
-`Java`를 기반으로 작성되어서 
+`Java`를 기반으로 작성되었습니다. 다른 언어를 사용하시는 분들은 가급적 'interface'를 만드시고 그를 구현해주세요. (나중에 테스트 코드를 일괄적을 만들기 위함입니다)
+
+따라서 `Java`를 쓰시는 분들은 위 인터페이스를 `implements`해서 코드를 완성해주시길 바랍니다.
 
 <br>
 
@@ -157,6 +161,28 @@ int delete(int index);
 
   - 만약 잘 삭제했다면 return `deleted data`
   - else `throw new ArrayIndexOutOfBoundsException`
+
+<br>
+
+```java
+void show();
+```
+
+- 현재 리스트의 요소들을 모두 출력.
+
+- 출력은 ' '공백을 기준으로 진행.
+
+- 예시
+
+  ```text
+  list 상태 : [1, 2, 3, 4]
+  show()
+  1 2 3 4
+  
+  list 상태 : [] <= empty list
+  show()
+  empty array
+  ```
 
 <br>
 
