@@ -54,15 +54,23 @@ public:
 /*
  *----------------------------------------------
  */
-Node* head = NULL;
+Node* head = NULL;                          //head 선언
+
+
+/*
+ *-------------------------------------------------------------
+ *Node 추가 함수
+ *head가 NULL일 때 생성 후 사이즈 증가 아니라면 tail에 노드 추가 후 사이즈 증가
+ *-------------------------------------------------------------
+ */
 bool SinglyLinkedList::add(int data){
     
     try{
         if(data>MAX_VALUE||data<MIN_VALUE)
-            throw "[ERROR] int range 를 넘어서는 data 값 입니다.";
+            throw string("[ERROR] int range 를 넘어서는 data 값 입니다.");
         if(head == NULL) {
             head = Node::create(data);
-            size++;
+            
         } else {
             Node* current = head;
             while(current->next != NULL) {
@@ -79,33 +87,60 @@ bool SinglyLinkedList::add(int data){
     }
     return false;
 }
+/*
+ *--------------------------------------------------------
+ *선택한 위치의 data값을 불러오는 함수 find()
+ *--------------------------------------------------------
+ */
 int SinglyLinkedList::find(int index){
     try{
         if(index>size||index<MIN_INDEX)
-            throw "[ERROR] 배열의 크기를 넘어서는 index입니다.";
-        int cnt = 0;
+            throw string("[ERROR] 배열의 크기를 넘어서는 index입니다.\n");
         Node* search;
         search = head;
-        while (search != NULL)
-        {
-            if (cnt != index) {
-                cnt++;
-                search = search->next;
-            }
-            
-        }
+        for (int i=0;i<index;i++)
+            search = search->next;
         return search->data;
     }catch(string exp){
         cout << exp;
     }
     return 0;
 }
-
+/*
+ *----------------------------------------------------------
+ *선택한 위치의 노드를 삭제하는 함수 del()
+ *----------------------------------------------------------
+ */
 int SinglyLinkedList::del(int index){
     try{
         int del_data;
         if(index>size||index<MIN_INDEX)
-            throw "[ERROR] 배열의 크기를 넘어서는 index입니다.";
+            throw "[ERROR] 배열의 크기를 넘어서는 index입니다.\n";
+        Node* delNode;
+        Node* preNode;
+        preNode = head;
+        delNode = head;
+        if(index==0){
+            del_data = delNode->data;
+            head = delNode->next;
+            Node::destroy(delNode);
+            size--;
+        }
+            
+        else
+        for(int i=0;i<index;i++){
+            if(i==index-1){
+                delNode = delNode->next;
+                preNode->next = delNode->next;
+                del_data=delNode->data;
+                
+                Node::destroy(delNode);
+                size--;
+            }else{
+                delNode = delNode->next;
+                preNode = preNode->next;
+            }
+        }
         
         return del_data;
     }catch(string exp){
@@ -113,7 +148,11 @@ int SinglyLinkedList::del(int index){
     }
     return 0;
 }
-
+/*
+ *--------------------------------------
+ *현재 리스트 data출력 함수 show()
+ *--------------------------------------
+ */
 void SinglyLinkedList::show(){
     if(head == NULL) {
         cout << "empty array" << endl;
@@ -126,15 +165,20 @@ void SinglyLinkedList::show(){
     }
     
 }
-
+/*
+ *test case
+ */
 int main(){
     SinglyLinkedList sll;
+    
     sll.add(1);
-    sll.add(1);
-    sll.add(1);
-    sll.add(1);
-    sll.add(1);
-     sll.find(3);
+    sll.add(2);
+    sll.add(3);
+    cout << sll.del(0) << "\n";
+    cout << sll.find(0) << "\n";
+    sll.add(4);
+    sll.add(5);
+//     sll.find(3);
     sll.show();
     return 0;
 }
