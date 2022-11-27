@@ -16,7 +16,7 @@ static const int MIN_INDEX = 0;
  *Node----------------------------------------
  */
 class Node {
-    public:
+public:
         int data;
         Node* next;
         static Node* create(int data);
@@ -45,7 +45,7 @@ public:
     int find(int index);
     
     int del(int index);
-  
+    
     void show();
     
     int size=0;
@@ -54,7 +54,7 @@ public:
 /*
  *----------------------------------------------
  */
-Node* head = NULL;                          //head 선언
+Node* head = NULL;                         //head 선언
 
 
 /*
@@ -67,8 +67,8 @@ bool SinglyLinkedList::add(int data){
     
     try{
         if(data>MAX_VALUE||data<MIN_VALUE)
-            throw string("[ERROR] int range 를 넘어서는 data 값 입니다.");
-        if(head == NULL) {
+            throw string("[ERROR] int range 를 넘어서는 data 값 입니다.\n");
+        if(head == NULL){
             head = Node::create(data);
             
         } else {
@@ -170,8 +170,7 @@ void SinglyLinkedList::show(){
  */
 int main(){
     SinglyLinkedList sll;
-    
-    sll.add(1);
+    sll.add(2000000001);
     sll.add(2);
     sll.add(3);
     cout << sll.del(0) << "\n";
