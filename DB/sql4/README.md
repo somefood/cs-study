@@ -4,3 +4,4 @@
 - [SELECT](https://school.programmers.co.kr/learn/courses/30/lessons/132203)
 - [IS NULL](https://school.programmers.co.kr/learn/courses/30/lessons/131114)
 - [String, Date](https://school.programmers.co.kr/learn/courses/30/lessons/59047)
+- [GROUP BY](https://school.programmers.co.kr/learn/courses/30/lessons/59041)
