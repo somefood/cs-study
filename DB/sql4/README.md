@@ -5,3 +5,8 @@
 - [IS NULL](https://school.programmers.co.kr/learn/courses/30/lessons/131114)
 - [String, Date](https://school.programmers.co.kr/learn/courses/30/lessons/59047)
 - [GROUP BY](https://school.programmers.co.kr/learn/courses/30/lessons/59041)
+
+## 12월 11일 추가 문제
+- [GROUP BY, 진료과별 총 예약 횟수 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/132202)
+- [JOIN, 없어진 기록 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/59042)
+- [JOIN, 있었는데요 없었습니다](https://school.programmers.co.kr/learn/courses/30/lessons/59043)
