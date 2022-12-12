@@ -1,0 +1,84 @@
+# 1.
+```mariadb
+SELECT FLAVOR
+FROM FIRST_HALF
+ORDER BY TOTAL_ORDER DESC, SHIPMENT_ID
+```
+
+# 2. 
+```mariadb
+SELECT DR_NAME, DR_ID, MCDP_CD, DATE_FORMAT(HIRE_YMD, "%Y-%m-%d") AS HIRE_YMD
+FROM DOCTOR
+WHERE MCDP_CD IN ('CS', 'GS')
+ORDER BY HIRE_YMD DESC, DR_NAME
+```
+
+# 3.
+```mariadb
+SELECT WAREHOUSE_ID, WAREHOUSE_NAME, ADDRESS,
+CASE WHEN FREEZER_YN IS NULL THEN 'N' ELSE FREEZER_YN END
+FROM FOOD_WAREHOUSE
+WHERE WAREHOUSE_NAME LIKE '%경기%'
+ORDER BY WAREHOUSE_ID
+```
+
+# 4.
+```mariadb
+SELECT ANIMAL_ID, NAME
+FROM ANIMAL_INS
+WHERE NAME LIKE ("%el%") AND ANIAL_TYPE = "Dog"
+ORDER BY NAME
+```
+
+# 5.
+```mariadb
+select name, count(name) as count
+from animal_ins
+group by name
+having count(name) >=2
+order by name
+```
+
+---
+
+# 12월 11일 추가문제
+
+# 1. 
+```mariadb
+select mcdp_cd as 진료과코드, count(apnt_no) as 5월예약건수
+from appointment
+where year(apnt_ymd) = 2022 and month(apnt_ymd) =5
+group by mcdp_cd
+order by 5월예약건수, 진료과코드
+```
+
+# 2.
+```mariadb
+SELECT ANIMAL_ID,NAME 
+FROM ANIMAL_OUTS 
+WHERE ANIMAL_ID NOT IN(
+SELECT ANIMAL_ID FROM ANIMAL_INS)
+```
+
+# 3.
+```mariadb
+SELECT A.ANIMAL_ID, A.NAME
+FROM ANIMAL_INS AS A JOIN ANIMAL_OUTS AS B ON A.ANIMAL_ID = B.ANIMAL_ID
+WHERE A.DATETIME > B.DATETIME
+ORDER BY A.DATETIME
+```
+
+# 4. 
+```mariadb
+SELECT DATETIME AS 시간 
+FROM ANIMAL_INS
+WHERE DATETIME = (SELECT MAX(DATETIME) FROM ANIMAL_INS)
+```
+
+# 5.
+```mariadb
+SELECT MEMBER_ID, MEMBER_NAME, GENDER, DATE_FORMAT(DATE_OF_BIRTH, "%Y-%m-%d") AS DATE_OF_BIRTH
+FROM MEMBER_PROFILE
+WHERE GENDER = 'W' AND MONTH(DATE_OF_BIRTH) = 3 AND TLNO IS NOT NULL 
+ORDER BY MEMBER_ID
+```
