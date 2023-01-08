@@ -32,3 +32,51 @@ order by name;
 ```mysql
 SELECT NAME, count(NAME) COUNT from ANIMAL_INS group by NAME having(count(NAME)>=2) order by NAME;
 ```
+
+<br />
+<br />
+12월 11일 추가 문제
+
+
+<br />
+
+1. GROUP BY, 진료과별 총 예약 횟수 출력하기
+
+```mysql
+SELECT MCDP_CD '진료과코드', count(APNT_YMD) '5월예약건수' from appointment 
+where DATE_FORMAT(APNT_YMD,'%m') = '05'
+group by MCDP_CD 
+order by count(APNT_YMD) asc, MCDP_CD asc;
+```
+
+2. JOIN, 없어진 기록 찾기
+
+```mysql
+SELECT ANIMAL_OUTS.ANIMAL_ID,ANIMAL_OUTS.NAME from ANIMAL_OUTS left join ANIMAL_INS 
+on(ANIMAL_INS.ANIMAL_ID=ANIMAL_OUTS.ANIMAL_ID)
+where ANIMAL_INS.ANIMAL_ID is null
+order by ANIMAL_OUTS.ANIMAL_ID;
+```
+
+3. JOIN, 있었는데요 없었습니다
+
+```mysql
+SELECT ANIMAL_INS.ANIMAL_ID,ANIMAL_INS.NAME from ANIMAL_INS inner join ANIMAL_OUTS 
+on(ANIMAL_INS.ANIMAL_ID = ANIMAL_OUTS.ANIMAL_ID)
+where (ANIMAL_INS.DATETIME>ANIMAL_OUTS.DATETIME)
+order by ANIMAL_INS.DATETIME asc;
+```
+
+4. SUM, MAX, MIN,최댓값 구하기
+
+```mysql
+SELECT Max(DATETIME) '시간' from animal_ins;
+```
+
+5. SELECT, 3월에 태어난 여성 회원 목록 출력하기
+
+```mysql
+SELECT MEMBER_ID,MEMBER_NAME,GENDER,DATE_FORMAT(DATE_OF_BIRTH, '%Y-%m-%d') DATE_OF_BIRTH from MEMBER_PROFILE 
+where DATE_FORMAT(DATE_OF_BIRTH,'%m') ='03' and NOT TLNO is null and GENDER = 'W'
+ORDER BY MEMBER_ID asc;
+```
