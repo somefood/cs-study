@@ -47,4 +47,6 @@ Docker를 통해 모두가 같은 데이터를 가지고 편안하게 연습할 
   mysql -u root -p starters12
   ```
 
+### 기록
+- [진행][Real MySQL 8.0 - 백은빈, 이성욱](https://github.com/Java-Bom/ReadingRecord/projects/1) ❓[질문하기](https://github.com/somefood/cs-study/issues/new?assignees=&labels=Real+MySQL&template=real-mysql-question.md&title=%5B%EC%95%84%EC%9D%B4%ED%85%9C+00%5D+%EA%B0%84%EB%8B%A8%ED%95%9C+%EC%A0%9C%EB%AA%A9)
   
