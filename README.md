@@ -1,50 +1,33 @@
 # CS Study
 
-각종 CS 문제들을 찾아 스터디하는 레포지토리입니다 :) 
+각종 CS 지식을 스터디하는 레포지토리입니다 :)
 
-## 규칙
+## SQL
 
-- 파일은 마크다운으로, 파일명은 본인 이니셜로 설정해주세요.
-> ex) HSJ.md
+SQL 공부는 [여기](https://github.com/somefood/cs-study/tree/main/SQL) 접속하여 README를 보시고 진행해주세요.
 
-- PR은 `[이름] 내용` 형태로 보내주세요.
-> ex) [홍석주] 문제 1번 풀이
+## ✍책 스터디📕
 
+전문화된 지식을 위해 책을 읽고 공부합시다!
 
-## DB - DB관련 문제와 SQL 문제를 만들고 연습하는 레포지토리!
+### Rule
 
-Docker를 통해 모두가 같은 데이터를 가지고 편안하게 연습할 수 있습니다.
+- 주단위로 책을 정리한다.
 
-### requirements
+- 분량은 주당 책의 1장~2장 정도로 유동적으로 정한다.
 
-- Docker
-- DataGrip or Workbench... DB 접근해서 쿼리 공부할 수 있는 툴이면 무방
+- 한 주마다 리딩을 하는 사람 한명이 있고 그 외 멤버들은 책을 읽다가 모르는 점, 기록으로 남겨 두고 싶은 예제 등 자유로운 방식으로 이슈를 추가한다.
 
-### 사용법 (Docker 실행되어 있어야 합니다!)
+- 스터디 시간 전까지 리딩하는 사람은 해당 이슈에 답변을 달고 스터디 시간에 함께 살펴본다. 모두가 납득하면 close.
 
-1. 레포지토리를 clone 받는다.
-2. 본인 OS에 맞는 스크립트를 실행시킨다.
-  - MAC or Linux
+- 해결하지 못한 이슈는 stuck 처리한다.
 
-    ```shell
-    ./linux.sh
-    ```
+### 책 스터디 기록
 
-  - Windows: ms.bat
-3. 툴에서 다음 DB들 열어줌
-  - sample: SQL 첫걸음 데이터
-  - starters: mysqltutorail.org 데이터 (출처: https://www.mysqltutorial.org/mysql-sample-database.aspx)
-4. 폴더에서 제공되는 문제를 보고, sql 작성하여 제출!
+- [진행][Real MySQL 8.0 - 백은빈, 이성욱](https://github.com/users/somefood/projects/1) ❓[질문하기](https://github.com/somefood/cs-study/issues/new?assignees=&labels=Real+MySQL&template=real-mysql-question.md&title=%5B%EC%95%84%EC%9D%B4%ED%85%9C+00%5D+%EA%B0%84%EB%8B%A8%ED%95%9C+%EC%A0%9C%EB%AA%A9)
 
-#### MariaDB 정보
+### 참고
 
-- ID: `root`
+- [자바봄 레포지토리](https://github.com/Java-Bom/ReadingRecord)
 
-- Password: `starters12`
-
-  ```shell
-  # 간단 접속 방법
-  mysql -u root -p starters12
-  ```
-
-  
+- [자바봄이 이펙티브 자바를 읽는 방법](https://javabom.tistory.com/70)
