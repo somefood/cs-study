@@ -1,6 +1,6 @@
-package movieapp.condition.discount;
+package Lec02.condition.discount;
 
-import movieapp.Screening;
+import Lec02.Screening;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;

@@ -1,11 +1,11 @@
-package movieapp;
+package Lec02;
 
-import movieapp.condition.discount.PeriodCondition;
-import movieapp.condition.discount.SequenceCondition;
-import movieapp.condition.refund.TimeCondition;
-import movieapp.policy.discount.AmountDiscountPolicy;
-import movieapp.policy.discount.PercentDiscountPolicy;
-import movieapp.policy.refund.AmountRefundPolicy;
+import Lec02.condition.discount.PeriodCondition;
+import Lec02.condition.discount.SequenceCondition;
+import Lec02.condition.refund.TimeCondition;
+import Lec02.policy.discount.AmountDiscountPolicy;
+import Lec02.policy.discount.PercentDiscountPolicy;
+import Lec02.policy.refund.AmountRefundPolicy;
 
 import java.time.DayOfWeek;
 import java.time.Duration;

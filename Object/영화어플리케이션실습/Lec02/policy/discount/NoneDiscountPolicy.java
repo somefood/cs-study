@@ -1,7 +1,7 @@
-package movieapp.policy.discount;
+package Lec02.policy.discount;
 
-import movieapp.Money;
-import movieapp.Screening;
+import Lec02.Money;
+import Lec02.Screening;
 
 public class NoneDiscountPolicy implements DiscountPolicy {
 

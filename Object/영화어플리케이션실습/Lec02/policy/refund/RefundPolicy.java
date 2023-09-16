@@ -1,7 +1,7 @@
-package movieapp.policy.refund;
+package Lec02.policy.refund;
 
-import movieapp.Money;
-import movieapp.Refund;
+import Lec02.Money;
+import Lec02.Refund;
 
 public interface RefundPolicy {
 

@@ -1,7 +1,7 @@
-package movieapp;
+package Lec02;
 
-import movieapp.policy.discount.DiscountPolicy;
-import movieapp.policy.refund.RefundPolicy;
+import Lec02.policy.discount.DiscountPolicy;
+import Lec02.policy.refund.RefundPolicy;
 
 import java.time.Duration;
 

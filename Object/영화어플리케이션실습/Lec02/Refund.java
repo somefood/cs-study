@@ -1,8 +1,9 @@
-package movieapp;
+package Lec02;
 
-import movieapp.policy.refund.RefundPolicy;
+import Lec02.policy.refund.RefundPolicy;
 
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 /**
  * refund - 환불과 관련된 정보를 가지고 있음

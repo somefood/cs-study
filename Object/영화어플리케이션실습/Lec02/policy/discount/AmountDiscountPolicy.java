@@ -1,8 +1,8 @@
-package movieapp.policy.discount;
+package Lec02.policy.discount;
 
-import movieapp.condition.discount.DiscountCondition;
-import movieapp.Money;
-import movieapp.Screening;
+import Lec02.condition.discount.DiscountCondition;
+import Lec02.Money;
+import Lec02.Screening;
 
 public class AmountDiscountPolicy extends DefaultDiscountPolicy {
 

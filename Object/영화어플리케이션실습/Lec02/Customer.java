@@ -1,4 +1,4 @@
-package movieapp;
+package Lec02;
 
 public class Customer {
 

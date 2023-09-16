@@ -1,4 +1,4 @@
-package movieapp;
+package Lec02;
 
 import java.math.BigDecimal;
 import java.util.Objects;

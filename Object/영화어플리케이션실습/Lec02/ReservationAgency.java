@@ -1,4 +1,6 @@
-package movieapp;
+package Lec02;
+
+import Lec02.condition.discount.DiscountCondition;
 
 public class ReservationAgency {
 

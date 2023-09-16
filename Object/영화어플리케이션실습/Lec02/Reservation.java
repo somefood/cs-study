@@ -1,4 +1,4 @@
-package movieapp;
+package Lec02;
 
 /**
  * 예매의 역할 : ?

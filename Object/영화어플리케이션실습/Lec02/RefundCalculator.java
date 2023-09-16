@@ -1,6 +1,6 @@
-package movieapp;
+package Lec02;
 
-import movieapp.policy.refund.RefundPolicy;
+import Lec02.policy.refund.RefundPolicy;
 
 /**
  * refundCalculate 역할 :

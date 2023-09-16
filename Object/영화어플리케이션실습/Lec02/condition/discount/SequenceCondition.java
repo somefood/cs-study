@@ -1,7 +1,7 @@
-package movieapp.condition.discount;
+package Lec02.condition.discount;
 
 
-import movieapp.Screening;
+import Lec02.Screening;
 
 public class SequenceCondition implements DiscountCondition {
 

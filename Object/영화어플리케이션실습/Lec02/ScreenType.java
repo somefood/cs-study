@@ -1,11 +1,14 @@
-package movieapp;
+package Lec02;
 
 public enum ScreenType {
 
 
-    IMAX(Money.wons(23000)),
-    DOLBYATMOS(Money.wons(19000)),
+    IMAX(Money.wons(20000)),
+    SCREENX(Money.wons(17000)),
     BASIC(Money.wons(13000));
+
+
+
 
 
     private Money fee;

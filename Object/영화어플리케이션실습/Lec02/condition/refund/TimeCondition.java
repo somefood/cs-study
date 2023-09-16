@@ -1,7 +1,8 @@
-package movieapp.condition.refund;
+package Lec02.condition.refund;
 
 
-import movieapp.Refund;
+import Lec02.Refund;
+import Lec02.Screening;
 
 import java.time.LocalDateTime;
 

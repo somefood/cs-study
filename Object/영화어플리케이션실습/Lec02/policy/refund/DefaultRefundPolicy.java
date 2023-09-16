@@ -1,8 +1,9 @@
-package movieapp.policy.refund;
+package Lec02.policy.refund;
 
-import movieapp.Money;
-import movieapp.Refund;
-import movieapp.condition.refund.RefundCondition;
+import Lec02.Money;
+import Lec02.Refund;
+import Lec02.Screening;
+import Lec02.condition.refund.RefundCondition;
 
 import java.util.ArrayList;
 import java.util.Arrays;
