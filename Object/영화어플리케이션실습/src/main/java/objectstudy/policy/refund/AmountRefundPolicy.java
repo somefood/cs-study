@@ -1,7 +1,7 @@
 package objectstudy.policy.refund;
 
-import objectstudy.Money;
-import objectstudy.Refund;
+import objectstudy.domain.Money;
+import objectstudy.domain.Refund;
 import objectstudy.condition.refund.RefundCondition;
 
 public class AmountRefundPolicy extends DefaultRefundPolicy{

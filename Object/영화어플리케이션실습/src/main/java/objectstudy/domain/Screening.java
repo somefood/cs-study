@@ -1,4 +1,6 @@
-package objectstudy;
+package objectstudy.domain;
+
+import objectstudy.movie.Movie;
 
 import java.time.LocalDateTime;
 

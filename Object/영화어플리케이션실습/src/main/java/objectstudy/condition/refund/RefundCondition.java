@@ -1,8 +1,7 @@
 package objectstudy.condition.refund;
 
 
-import objectstudy.Refund;
-import objectstudy.Screening;
+import objectstudy.domain.Refund;
 
 public interface RefundCondition {
 

@@ -1,6 +1,6 @@
 package objectstudy.condition.discount;
 
-import objectstudy.Screening;
+import objectstudy.domain.Screening;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;

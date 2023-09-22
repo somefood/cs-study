@@ -1,6 +1,6 @@
-package objectstudy.repository;
+package objectstudy.movie.repository;
 
-import objectstudy.Movie;
+import objectstudy.movie.Movie;
 
 import java.util.*;
 

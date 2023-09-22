@@ -1,4 +1,4 @@
-package objectstudy;
+package objectstudy.domain;
 
 public enum ScreenType {
 

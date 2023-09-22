@@ -1,6 +1,6 @@
 package objectstudy.condition.discount;
 
-import objectstudy.Screening;
+import objectstudy.domain.Screening;
 
 public interface DiscountCondition {
     boolean isSatisfiedBy(Screening screening);

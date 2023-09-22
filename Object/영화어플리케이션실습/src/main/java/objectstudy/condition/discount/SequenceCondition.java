@@ -1,7 +1,7 @@
 package objectstudy.condition.discount;
 
 
-import objectstudy.Screening;
+import objectstudy.domain.Screening;
 
 public class SequenceCondition implements DiscountCondition {
 

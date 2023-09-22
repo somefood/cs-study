@@ -1,7 +1,7 @@
 package objectstudy.initializer;
 
-import objectstudy.Money;
-import objectstudy.Movie;
+import objectstudy.domain.Money;
+import objectstudy.movie.Movie;
 import objectstudy.condition.discount.PeriodCondition;
 import objectstudy.condition.discount.SequenceCondition;
 import objectstudy.condition.refund.TimeCondition;
@@ -10,7 +10,7 @@ import objectstudy.policy.discount.DiscountPolicy;
 import objectstudy.policy.discount.PercentDiscountPolicy;
 import objectstudy.policy.refund.AmountRefundPolicy;
 import objectstudy.policy.refund.RefundPolicy;
-import objectstudy.repository.MovieRepository;
+import objectstudy.movie.repository.MovieRepository;
 
 import java.time.DayOfWeek;
 import java.time.Duration;

@@ -1,7 +1,7 @@
 package objectstudy.policy.discount;
 
-import objectstudy.Money;
-import objectstudy.Screening;
+import objectstudy.domain.Money;
+import objectstudy.domain.Screening;
 
 public class NoneDiscountPolicy implements DiscountPolicy {
 

@@ -1,5 +1,8 @@
-package objectstudy;
+package objectstudy.movie;
 
+import objectstudy.domain.Money;
+import objectstudy.domain.Refund;
+import objectstudy.domain.Screening;
 import objectstudy.policy.discount.DiscountPolicy;
 import objectstudy.policy.refund.RefundPolicy;
 

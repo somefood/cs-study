@@ -1,7 +1,7 @@
 package objectstudy;
 
 import objectstudy.initializer.MovieInit;
-import objectstudy.repository.MovieRepository;
+import objectstudy.movie.repository.MovieRepository;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

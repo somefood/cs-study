@@ -1,4 +1,4 @@
-package objectstudy;
+package objectstudy.domain;
 
 /**
  * 예매의 역할 : ?
