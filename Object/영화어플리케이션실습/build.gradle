@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+java {
+    sourceCompatibility = '17'
+}
+
+configurations {
+    configureEach {
+        exclude module: 'org.hamcrest'
+    }
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+    testImplementation 'org.assertj:assertj-core:3.23.1'
+}
+
+test {
+    useJUnitPlatform()
+}
