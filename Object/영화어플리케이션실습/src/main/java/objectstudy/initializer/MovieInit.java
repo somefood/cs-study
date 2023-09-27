@@ -16,13 +16,14 @@ import java.time.DayOfWeek;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.*;
 
 public class MovieInit {
 
-    public static void createMovieData(MovieRepository movieRepository) {
+    public static LinkedHashMap<Long,Movie> createMovieData(MovieRepository movieRepository) {
         Movie movie1 = makeMovie(
                 "오펜하이머",
-                Duration.ofMillis(180),
+                Duration.ofMinutes(180),
                 Money.wons(12000),
                 new AmountDiscountPolicy(
                         Money.wons(2000),
@@ -37,7 +38,7 @@ public class MovieInit {
 
         Movie movie2 = makeMovie(
                 "엘리멘탈",
-                Duration.ofMillis(180),
+                Duration.ofMinutes(180),
                 Money.wons(13000),
                 new PercentDiscountPolicy(
                         0.1,
@@ -48,6 +49,8 @@ public class MovieInit {
                 new AmountRefundPolicy(new TimeCondition(LocalDateTime.now()))
         );
         movieRepository.save(movie2);
+
+        return movieRepository.findAll();
     }
 
     public static Movie makeMovie(String title, Duration runningTime, Money fee, DiscountPolicy discountPolicy, RefundPolicy refundPolicy) {
