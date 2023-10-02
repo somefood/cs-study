@@ -37,13 +37,13 @@ public class MovieApp {
                 switch (select) {
                     case 1 -> {
                         LinkedHashMap<Long, Screening> screenInfos = screeningRepository.findAll();
-                        for ( Screening screenInfo : screenInfos.values()) {
+                        for (Screening screenInfo : screenInfos.values()) {
                             System.out.println(screenInfo);
                         }
 
                     }
                     case 2 -> {
-                        System.out.println("예매자 이름 입력 해주세요!" );
+                        System.out.println("예매자 이름 입력 해주세요!");
                         String customerName = scanner.next();
                         Customer customer = new Customer(customerName);
                         customerRepository.save(customer);
