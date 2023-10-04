@@ -61,6 +61,11 @@ public class MovieApp {
                         int sequence = scanner.nextInt();
                         Screening findScreening = screeningRepository.findByMovieNameAndSequence(movieName, sequence);
 
+                        if (findScreening == null) {
+                            System.out.println("상영하지 않는 영화입니다. 다시 예매 정보를 입력하세요");
+                            break;
+                        }
+
                         Reservation reserve = reservationAgency.reserve(findScreening, customer, audienceCount);
 
                         System.out.println("예매결과 출력");
