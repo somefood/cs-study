@@ -34,6 +34,10 @@ public class Movie {
         return fee.minus(discountPolicy.calculateDiscountAmount(screening));
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     public Money calculateRefundFee(Refund refund) {
         return refundPolicy.calculateRefundAmount(refund);
     }
