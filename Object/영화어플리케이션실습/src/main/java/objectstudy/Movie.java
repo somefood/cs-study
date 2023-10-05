@@ -7,8 +7,7 @@ import java.time.Duration;
 
 /**
  * obectstudy.Movie : 예매하는 대상의 정보를 갖고 있다.
- *       책임 : 예매 대상 금액 계산
- *
+ * 책임 : 예매 대상 금액 계산
  */
 public class Movie {
 
@@ -19,7 +18,7 @@ public class Movie {
     private RefundPolicy refundPolicy;
 
 
-    public Movie(String title, Duration runningTime, Money fee, DiscountPolicy discountPolicy,RefundPolicy refundPolicy) {
+    public Movie(String title, Duration runningTime, Money fee, DiscountPolicy discountPolicy, RefundPolicy refundPolicy) {
         this.title = title;
         this.runningTime = runningTime;
         this.fee = fee;
@@ -35,7 +34,11 @@ public class Movie {
         return fee.minus(discountPolicy.calculateDiscountAmount(screening));
     }
 
-    public Money calculateRefundFee(Refund refund){
+    public String getTitle() {
+        return title;
+    }
+
+    public Money calculateRefundFee(Refund refund) {
         return refundPolicy.calculateRefundAmount(refund);
     }
 
@@ -45,7 +48,7 @@ public class Movie {
 
     @Override
     public String toString() {
-        return "obectstudy.Movie{" +
+        return "Movie{" +
                 "title='" + title + '\'' +
                 ", runningTime=" + runningTime +
                 ", fee=" + fee +

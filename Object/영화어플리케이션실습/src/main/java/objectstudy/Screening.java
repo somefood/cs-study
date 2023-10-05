@@ -6,8 +6,7 @@ import java.time.LocalDateTime;
 /**
  * obectstudy.Screening 역할 : 사용자들이 예매하는 대상
  * obectstudy.Screening 책임 : 1. 예매
- *                 2. 환불
- *
+ * 2. 환불
  */
 public class Screening {
 
@@ -27,23 +26,23 @@ public class Screening {
         this.whenScreened = whenScreened;
     }
 
-    public LocalDateTime getStartTime(){
+    public LocalDateTime getStartTime() {
         return whenScreened;
     }
 
-    public boolean isSequence(int sequence){
+    public boolean isSequence(int sequence) {
         return this.sequence == sequence;
     }
 
-    public Money getMovieFee(){
+    public Money getMovieFee() {
         return movie.getFee();
     }
 
-    public Reservation reserve(Customer customer, int audienceCount){
+    public Reservation reserve(Customer customer, int audienceCount) {
         return new Reservation(customer, this, calculateFee(audienceCount), audienceCount);
     }
 
-    public Money calculateFee(int audienceCount){
+    public Money calculateFee(int audienceCount) {
 
         return movie.calculateMovieFee(this).times(audienceCount);
     }
@@ -53,5 +52,13 @@ public class Screening {
         return movie.calculateRefundFee(refund);
     }
 
+    @Override
+    public String toString() {
+        return "Screening{" +
+                "movie=" + movie +
+                ", sequence=" + sequence +
+                ", whenScreened=" + whenScreened +
+                '}';
+    }
 
 }
