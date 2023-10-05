@@ -17,4 +17,14 @@ public class Reservation {
         this.fee = fee;
         this.audienceCount = audienceCount;
     }
+
+    public String getCustomerName() {
+        return customer.getName();
+    }
+
+    public Money getFee() {
+        return fee;
+    }
+
+
 }

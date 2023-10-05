@@ -69,7 +69,10 @@ public class MovieApp {
                         Reservation reserve = reservationAgency.reserve(findScreening, customer, audienceCount);
 
                         System.out.println("예매결과 출력");
-                        System.out.println(reserve);
+
+                        System.out.println("예매자 이름 : "+reserve.getCustomerName()
+                                +" | 예매 영화 : "  + movieName
+                                +" | 예매 총 금액: " + reserve.getFee());
                     }
                     case 0 -> {
                         System.out.println("프로그램 종료");
