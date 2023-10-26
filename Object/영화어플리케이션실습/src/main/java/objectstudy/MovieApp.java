@@ -2,9 +2,7 @@ package objectstudy;
 
 import objectstudy.initializer.MovieInit;
 import objectstudy.initializer.ScreeningInit;
-import objectstudy.repository.CustomerRepository;
-import objectstudy.repository.MovieRepository;
-import objectstudy.repository.ScreeningRepository;
+import objectstudy.repository.*;
 
 import java.util.InputMismatchException;
 import java.util.LinkedHashMap;
@@ -16,6 +14,8 @@ public class MovieApp {
     private MovieRepository movieRepository = new MovieRepository();
     private ScreeningRepository screeningRepository = new ScreeningRepository();
     private CustomerRepository customerRepository = new CustomerRepository();
+    private ReservationRepository reservationRepository = new ReservationRepository();
+    private RefundRepository refundRepository = new RefundRepository();
 
     public void showMenu() {
         Scanner scanner = new Scanner(System.in);
@@ -37,13 +37,13 @@ public class MovieApp {
                 switch (select) {
                     case 1 -> {
                         LinkedHashMap<Long, Screening> screenInfos = screeningRepository.findAll();
-                        for (Screening screenInfo : screenInfos.values()) {
+                        for ( Screening screenInfo : screenInfos.values()) {
                             System.out.println(screenInfo);
                         }
 
                     }
                     case 2 -> {
-                        System.out.println("예매자 이름 입력 해주세요!");
+                        System.out.println("예매자 이름 입력 해주세요!" );
                         String customerName = scanner.next();
                         Customer customer = new Customer(customerName);
                         customerRepository.save(customer);
@@ -56,24 +56,43 @@ public class MovieApp {
 
                         String movieName = scanner.next();
 
+
                         System.out.println("예매하실 영화의 순번을 입력해주세요");
 
                         int sequence = scanner.nextInt();
                         Screening findScreening = screeningRepository.findByMovieNameAndSequence(movieName, sequence);
 
-                        if (findScreening == null) {
+                        if (findScreening==null) {
                             System.out.println("상영하지 않는 영화입니다. 다시 예매 정보를 입력하세요");
                             break;
                         }
 
                         Reservation reserve = reservationAgency.reserve(findScreening, customer, audienceCount);
 
+                        reservationRepository.save(reserve);
                         System.out.println("예매결과 출력");
-
                         System.out.println("예매자 이름 : "+reserve.getCustomerName()
                                 +" | 예매 영화 : "  + movieName
                                 +" | 예매 총 금액: " + reserve.getFee());
                     }
+                    case 3 ->{
+                        System.out.println("예매자 이름을 입력해주세요!");
+                        String customerName = scanner.next();
+
+                        Reservation refundReservation = reservationRepository.findByCustomer(customerName);
+
+
+                        Refund refund = refundReservation.refund();
+
+                        reservationRepository.delete(refundReservation);
+                        refundRepository.save(refund);
+
+                        System.out.println("예매결과 출력");
+                        System.out.println("예매자 이름 : "+refundReservation.getCustomerName()
+                                +" | 환불 총 금액: " + refund.getMovieFee());
+
+                    }
+
                     case 0 -> {
                         System.out.println("프로그램 종료");
                         return;
@@ -93,6 +112,8 @@ public class MovieApp {
         LinkedHashMap<Long, Movie> movieData = MovieInit.createMovieData(movieApp.movieRepository);
 
         ScreeningInit.createScreeningData(movieApp.screeningRepository, movieData);
+
+
 
         movieApp.showMenu();
     }

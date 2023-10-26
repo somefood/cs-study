@@ -154,5 +154,30 @@ class MovieTest {
 
     }
 
+    @Test
+    @DisplayName("환불 성공")
+    void refundTest1(){
+        //given
+
+        Customer customer = new Customer("김승옥");
+        int audienceCount = 1;
+
+        Screening screening = new Screening(amountMovie, 2, LocalDateTime.of(2023, 9, 14, 10, 10));
+
+        ReservationAgency reservationAgency = new ReservationAgency();
+        Reservation reserveResult = reservationAgency.reserve(screening, customer, 1);
+        reservationRepository.save(reserveResult);
+
+        //when
+        Refund refund = reserveResult.refund();
+        reservationRepository.delete(reserveResult);
+        refundRepository.save(refund);
+
+        //then
+        Assertions.assertThat(refund.getReservation().getCustomerName()).isEqualTo(reserveResult.getCustomerName());
+        Assertions.assertThat(refund.getMovieFee()).isEqualTo(reserveResult.getFee());
+
+    }
+
 
 }

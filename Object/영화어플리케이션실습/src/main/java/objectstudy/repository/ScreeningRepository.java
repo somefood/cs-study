@@ -11,14 +11,14 @@ public class ScreeningRepository {
     private LinkedHashMap<Long, Screening> screeningDict = new LinkedHashMap<>();
 
     public void save(Screening screening) {
-        screeningDict.put(screeningId++, screening);
+        screeningDict.put(screeningId++,screening );
     }
 
     public Optional<Screening> findById(Long screeningId) {
         return Optional.of(screeningDict.get(screeningId));
     }
 
-    public Screening findByMovieNameAndSequence(String movieName, int sequence) {
+    public Screening findByMovieNameAndSequence(String movieName, int sequence){
 
         for (Screening screening : screeningDict.values()) {
 
@@ -31,7 +31,9 @@ public class ScreeningRepository {
     }
 
 
-    public LinkedHashMap<Long, Screening> findAll() {
+
+    public LinkedHashMap<Long, Screening> findAll()
+    {
         return (LinkedHashMap<Long, Screening>) screeningDict.clone();
     }
 }
